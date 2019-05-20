@@ -10,6 +10,7 @@ CLIENT_SECRET = getattr(settings, 'OIDC_CLIENT_SECRET', None)
 USERINFO_ENDPOINT = getattr(settings, 'OIDC_USERINFO_ENDPOINT', None)
 SCOPE = getattr(settings, 'OIDC_SCOPE', 'openid email')
 ISSUER = getattr(settings, 'OIDC_ISSUER', None)
+PROVIDER_NAME = getattr(settings, 'OIDC_PROVIDER_NAME', ISSUER)
 
 WELL_KNOWN_SCHEME = "/.well-known/openid-configuration"
 ERR_INVALID_RESPONSE = 'Unable to fetch user information from provider.  Please check the log.'

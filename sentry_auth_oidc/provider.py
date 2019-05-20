@@ -11,7 +11,8 @@ from .constants import (
     ISSUER, TOKEN_ENDPOINT,
     CLIENT_SECRET,
     CLIENT_ID,
-    SCOPE, DATA_VERSION
+    SCOPE, DATA_VERSION,
+    PROVIDER_NAME
 )
 from .views import FetchUser, OIDCConfigureView
 import logging
@@ -40,7 +41,7 @@ class OIDCLogin(OAuth2Login):
 
 
 class OIDCProvider(OAuth2Provider):
-    name = ISSUER
+    name = PROVIDER_NAME
     client_id = CLIENT_ID
     client_secret = CLIENT_SECRET
 
